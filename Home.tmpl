@@ -1,0 +1,41 @@
+<!-- This is the home page for the Web UI. This is used by OME::Web::Home -->
+<table cellpadding="3" width="100%" cellspacing="0">
+	<tr>
+		<td align="center" width="33%" style="border-style: solid; border-width: 0px 0px 2px 0px;">
+			<TMPL_VAR NAME=image_header>
+		</td>
+		<td align="center" width="33%" style="border-style: solid; border-width: 0px 0px 2px 2px;">
+			<TMPL_VAR NAME=project_header>
+		</td>
+		<td align="center" width="33%" style="border-style: solid; border-width: 0px 0px 2px 2px;">
+			<TMPL_VAR NAME=dataset_header>
+		</td>
+	</tr>
+	<tr>
+		<td width="33%" valign="top" style="border-style: solid; border-width: 0px 0px 2px 0px;">
+			<TMPL_VAR NAME=images>
+		</td>
+		<td align="right" width="33%" valign="top" style="border-style: solid; border-width: 0px 0px 2px 2px;">
+			<TMPL_VAR NAME=projects>
+		</td>
+		<td align="right" width="33%" valign="top" style="border-style: solid; border-width: 0px 0px 2px 2px;">
+			<TMPL_VAR NAME=datasets>
+		</td>
+	</tr>
+	<tr>
+		<td align="right" class="ome_menu_td" colspan="3">
+			<a href="serve.pl?Page=OME::Web::DBObjCreate&amp;Type=OME::Project" class="ome_quiet">New Project</a> | 
+			<a href="serve.pl?Page=OME::Web::DBObjCreate&amp;Type=OME::Dataset" class="ome_quiet">New Dataset</a> | 
+			<a href="serve.pl?Page=OME::Web::ImportImages" class="ome_quiet">Import Images</a> |
+			
+			<a href="javascript: search('OME::Image', '__order', '!inserted');" class="ome_quiet">Recently Imported Images</a> |
+			<a href="javascript: search('OME::AnalysisChainExecution', '__order', '!timestamp');" class="ome_quiet">Recently Executed Chains</a>
+		</td>
+	</tr>
+</table>
+<br><br>
+<TMPL_VAR NAME=search_box>
+<br><br>
+<TMPL_VAR NAME=taskpane>
+<hr>
+<p align="center" class="ome_quiet">Copyright © 2005 the OME Project.</p>

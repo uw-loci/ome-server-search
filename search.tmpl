@@ -1,0 +1,24 @@
+<!-- These are the search controls. -->
+From Dataset:<input type="hidden" name="accessor_type" value="OME::Dataset"/>
+<input type="hidden" name="accessor_method" value="images"/>
+<table width="100%"><tr><td align="right">
+<TMPL_IF NAME=/accessor_object_ref>
+	<TMPL_VAR NAME=/accessor_object_ref> 
+<TMPL_ELSE>
+	<a href="javascript: selectOne( 'OME::Dataset', 'accessor_id' );" Title="Select an Dataset to Search from">Select a Dataset</a>
+</TMPL_IF>
+</td></tr></table>
+<hr>
+
+That match criteria:<br>
+
+<TMPL_VAR NAME=/adv_search_setup>
+
+<TMPL_VAR NAME=name>
+<TMPL_VAR NAME=description>
+<TMPL_VAR NAME=created>
+<TMPL_VAR NAME=inserted>
+<TMPL_VAR NAME=owner>
+<TMPL_VAR NAME=group>
+<TMPL_VAR NAME=id>
+</div>

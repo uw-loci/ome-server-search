@@ -1,0 +1,15 @@
+<!-- These are the search controls. -->
+<TMPL_IF NAME=/accessor_object_ref>
+	From <TMPL_VAR NAME=/accessor_object_ref><hr>
+</TMPL_IF>
+
+That match criteria:<br>
+
+<TMPL_VAR NAME=/adv_search_setup>
+
+<TMPL_LOOP NAME=/search_fields_loop>
+	<TMPL_VAR NAME=search_field>
+</TMPL_LOOP>
+</div>
+
+

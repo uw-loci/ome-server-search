@@ -1,0 +1,27 @@
+<form method="post" action="serve.pl?Page=OME::Web::Search" enctype="application/x-www-form-urlencoded" name="primary">
+<input type="hidden" name="FromPage" value="Home">
+<table align="center" class="ome_location_menu_td" cellpadding="3" cellspacing="3">
+	<tr>
+		<td align=center colspan="2" class="ome_main_menu_heading">
+			Search OME
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<TMPL_VAR NAME=search_types>
+		</td>
+		<td>
+			<TMPL_VAR NAME=owner_names>
+		</td>
+	</tr>
+	<tr>
+		<td>	
+			<input type="text" name="all_fields" size="25" />
+		</td>
+		<td align="center">
+			<input type="submit" Value="Search">
+		</td>
+	</tr>
+
+</table>
+</form>

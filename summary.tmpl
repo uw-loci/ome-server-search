@@ -1,0 +1,42 @@
+<TABLE width="100%">
+<TR>
+	<TD COLSPAN="2">
+		<table width="100%"><tr><td>
+		<a title="<TMPL_VAR NAME=name>" href="<TMPL_VAR NAME=/obj_detail_url>" class="ome_detail">
+			<TMPL_VAR NAME=name/max_text_length-25>
+		</a>
+		</td><td align="right">
+		<TMPL_VAR NAME=/selector>
+		</td></tr></table>
+	</TD>
+</TR>
+<TR>
+	<TD WIDTH="50">
+		<a href="<TMPL_VAR NAME='/obj_detail_url'>">
+		<img src="<TMPL_VAR NAME=thumb_url>">
+		</a>
+	</TD>
+	<TD ALIGN="left">
+		<TMPL_VAR NAME=owner>
+		<BR>
+		<TMPL_VAR NAME=group>
+		<BR>
+		<TMPL_VAR NAME=created>
+		<BR>
+		<a href="<TMPL_VAR NAME='/download_all_url'>">
+		Download</a>
+		<BR>
+		<TMPL_IF name='/metadata_url'>
+			<a href="<TMPL_VAR NAME='/metadata_url'>">
+			Metadata</a>
+		</TMPL_IF>
+	</TD>
+</TR>
+<TR>
+	<TD COLSPAN="2">
+		<TMPL_VAR NAME=description/max_text_length-60>
+		<BR>
+		<TMPL_VAR NAME=module_executions/render-popup>
+	</TD>
+</TR>
+</TABLE>

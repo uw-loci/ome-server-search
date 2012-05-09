@@ -1,0 +1,7 @@
+<input type="checkbox" name="adv_switch" onClick="javascript: advanced=document.getElementById('advanced_text'); basic=document.getElementById('basic_text'); if (document.forms['primary'].adv_switch.checked){ basic.style.visibility='hidden'; advanced.style.visibility='visible'; } else { basic.style.visibility='visible'; advanced.style.visibility='hidden'; }" <TMPL_VAR NAME=/adv_switch>> Advanced Search
+
+<div ID="basic_text" STYLE="position:absolute; visibility: <TMPL_VAR NAME=/basic_box>">
+	<br><TMPL_VAR name=/all_fields>
+</div>
+
+<div ID="advanced_text" STYLE="position:relative; visibility: <TMPL_VAR NAME=/adv_box>">
